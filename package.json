@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "test": "jest --passWithNoTests --runInBand",
     "coverage": "jest --coverage"
-  }, 
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/comradexlight/ahj_hw5_list_editor.git"
@@ -35,7 +35,7 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.3.1",
     "mini-css-extract-plugin": "^2.7.0",
-    "puppeteer": "^19.2.2",
+    "puppeteer": "^18.2.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.11.1"
