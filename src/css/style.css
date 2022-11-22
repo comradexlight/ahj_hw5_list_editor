@@ -1,3 +1,37 @@
 button {
     cursor: pointer;
+    height: 10px;
+    width: 10px;
 }
+
+.items {
+    display: inline-block;
+}
+
+.items-table {
+    border: 1px solid;
+    padding: 10px;
+}
+
+.item-title {
+    padding: 10px;
+}
+
+.item-price {
+    padding: 10px;
+}
+
+.item-actions {
+    padding: 10px;
+}
+
+th {
+    padding: 10px;
+}
+
+.items-head {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
