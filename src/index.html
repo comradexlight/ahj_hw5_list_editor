@@ -5,22 +5,31 @@
     <title></title>
 </head>
 <body>
-    <div class="items">
-        <div class="items-head">
-            <h2>Товары</h2><button class="item-actions-create"></button>
+    <div class="list-editor">
+        <div class="list-editor-head">
+            <div class="list-editor-head_title">Товары</div>
+            <button class="list-editor-head_create">+</button>
         </div>
-        <table class="items-table">
+        <table class="list-editor-table">
             <tr>
                 <th>Название</th>
                 <th>Стоимость</th>
                 <th>Действия</th>
             </tr>
-            <tr class="item-row">
-                <td class="item-title">IPhone</td>
-                <td class="item-price">60000</td>
-                <td class="item-actions">
-                    <button class="item-actions-update"></button>
-                    <button class="item-actions-delete"></button>
+            <tr>
+                <td class="list-editor-table-title">title1</td>
+                <td class="list-editor-table-cost">1000</td>
+                <td>
+                    <button class="list-editor-table_update">@</button>
+                    <button class="list-editor-table_delete">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="list-editor-table-title">title2</td>
+                <td class="list-editor-table-cost">1000</td>
+                <td>
+                    <button class="list-editor-table_update">@</button>
+                    <button class="list-editor-table_delete">-</button>
                 </td>
             </tr>
         </table>
