@@ -16,6 +16,7 @@ button {
   border: 0;
   padding: 0;
   background: transparent;
+  font-size: 150%;
 }
 
 .list-editor {
@@ -23,6 +24,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  z-index: 1;
 }
 
 .list-editor-head {
@@ -38,3 +40,14 @@ button {
   background-color: white;
 }
 
+.popup-item {
+  background-color: white;
+  z-index: 2;
+  position: absolute;
+  top: 5%;
+  border: 1px solid;
+}
+
+.popup-item-btn {
+  margin-top: 3%;
+}
