@@ -23,7 +23,7 @@ export default class ListEditorWidget {
   btnCreateOnClick = (el) => {
     el.preventDefault();
     console.log(el);
-    this._popup.showPopup(el);
+    this._popup.showPopup();
   };
 
   btnUpdateOnClick = (el) => {
