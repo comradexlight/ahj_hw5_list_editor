@@ -22,13 +22,13 @@ export default class ListEditorWidget {
 
   btnCreateOnClick = (el) => {
     el.preventDefault();
-    console.log(el);
     this._popup.showPopup();
   };
 
   btnUpdateOnClick = (el) => {
     el.preventDefault();
-    console.log(el);
+    this._popup.showPopup();
+    
   };
 
   btnDeleteOnClick = (el) => {

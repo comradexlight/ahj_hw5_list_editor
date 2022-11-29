@@ -24,29 +24,48 @@ export default class Popup {
     this._btnCancel = this._popup.querySelector('.popup-item-btn-cancel');
     this._btnSave.addEventListener('click', this.btnSaveOnClick);
     this._btnCancel.addEventListener('click', this.btnCancelOnClick);
+    this.rows = [];
   }
 
-  showPopup(el) {
+  showPopup() {
     document.body.appendChild(this._popup);
   }
 
-  btnSaveOnClick = (el) => {
+  btnSaveOnClick(el) {
     el.preventDefault();
     const id = performance.now();
     const itemTitle = this._popup.querySelector('.popup-item-main-title-input').value.trim();
     const itemCost = this._popup.querySelector('.popup-item-main-cost-input').value.trim();
     const popupData = {
-        id,
-        title: itemTitle,
-        cost: itemCost,
+      id,
+      title: itemTitle,
+      cost: itemCost,
     };
-    console.log(popupData);
+    this.rows.push(popupData);
     this.btnCancelOnClick(el);
-    return popupData;
-  };
+    this.createTableRow(popupData);
+  }
 
-  btnCancelOnClick = (el) => {
+  createTableRow(data) {
+    const tableRow = document.createElement('tr');
+    tableRow.innerHTML = `
+    <td class="list-editor-table-title">title1</td>
+    <td class="list-editor-table-cost">1000</td>
+    <td>
+        <button class="list-editor-table_update">&#9998;</button>
+        <button class="list-editor-table_delete">&times;</button>
+    </td>
+    `;
+    const rowTitleElement = tableRow.querySelector('.list-editor-table-title');
+    const rowCostElement = tableRow.querySelector('.list-editor-table-cost');
+    const table = document.querySelector('tbody');
+    rowTitleElement.textContent = data.title;
+    rowCostElement.textContent = data.cost;
+    table.appendChild(tableRow);
+  }
+
+  btnCancelOnClick(el) {
     el.preventDefault();
     document.body.removeChild(this._popup);
-  };
+  }
 }
