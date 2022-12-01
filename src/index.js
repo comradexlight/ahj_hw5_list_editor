@@ -1,4 +1,7 @@
 import './css/style.css';
 import ListEditorWidget from './js/listEditorWidget';
 
-const listEditorWidget = new ListEditorWidget('.list-editor');
+document.addEventListener('DOMContentLoaded', () => {
+  const listEditor = new ListEditorWidget('.list-editor');
+  listEditor.readTable();
+});
